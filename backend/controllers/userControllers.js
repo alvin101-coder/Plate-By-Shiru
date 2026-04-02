@@ -1,20 +1,20 @@
-import jwt from 'jsonwebtoken'
+// controllers/adminControllers.js
+import jwt from "jsonwebtoken";
 
-const adminLogin = async (req, res) => {
-    try {
-        const {email, password} = req.body
+const loginSuperAdmin = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const admin = await Admin.findOne({ email });
+    if (!admin) return res.json({ success: false, message: "Admin not found" });
 
-        if(email === process.env.ADMIN_EMAIL && password ===  process.env.ADMIN_PASSWORD){
-            const token = jwt.sign(email+password, process.env.JWT_SECRET)
-            res.json({success:true, token, message: "Login successfull"})
-        } else {
-            res.json({success:false, message: "Invalid login details"})
-        }
-    } catch (error) {
-        console.log(error);
-        res.json({success:false, message: error.message})
-    }
+    const match = await bcrypt.compare(password, admin.password);
+    if (!match) return res.json({ success: false, message: "Invalid credentials" });
 
-}
+    const token = jwt.sign({ id: admin._id, email: admin.email }, process.env.JWT_SECRET, { expiresIn: "1d" });
+    res.json({ success: true, token, message: "Login successful" });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+};
 
-export {adminLogin}
+export { loginSuperAdmin };

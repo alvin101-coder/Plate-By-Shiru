@@ -5,10 +5,16 @@ import Service from './Components/Service'
 import MenuDisplay from './Components/MenuDisplay'
 import ReservationForm from './Components/ReservationForm'
 import Footer from './Components/Footer'
+import {ToastContainer} from 'react-toastify'
+
+
+export const backendUrl = 'http://localhost:4000'
+
 
 const App = () => {
   return (
     <div>
+      <ToastContainer />
       {/* <Navbar /> */}
       <Hero />
       <Service />

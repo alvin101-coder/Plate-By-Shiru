@@ -6,43 +6,57 @@ import line from '../assets/line.png'
 
 const Service = () => {
   return (
-    <div>
-      <div className='flex bg3'>
-        {/* first service */}
-        <div className='w-1/3'>
-          <div className='p-16'>
-            <img src={line} alt="" className='-mb-2 w-45 place-self-center'/>
-            <h2 className='text-amber-300 text-center text-4xl'>Breakfast</h2>
-            <p className='text-center mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugiat repellendus eos qui ab saepe error modi eius perferendis deserunt.</p>
-          </div>
-          <div>
-            <img src={img1} alt="" className='h-160'/>
-          </div>
+    <section id="services" className="bg3 py-20">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Section heading */}
+        <div className="text-center mb-12">
+          <img src={line} alt="divider line" className="mx-auto mb-4 w-40" />
+          <h2 className="text-amber-400 text-4xl font-bold">Our Services</h2>
+          <p className="mt-4 text-gray-200 max-w-2xl mx-auto">
+            Explore the flavors we proudly serve — from hearty breakfasts to refreshing drinks and savory appetizers.
+          </p>
         </div>
-        {/* second service */}
-        <div className='w-1/3'>
-          <div>
-            <img src={img3} alt="" className='h-160'/>
+
+        {/* Services grid */}
+        <div className="grid md:grid-cols-3 gap-10">
+          
+          {/* Breakfast */}
+          <div className="flex flex-col items-center text-center bg-white/5 rounded-lg shadow-lg overflow-hidden hover:scale-[1.02] transition">
+            <div className="p-8">
+              <h3 className="text-amber-400 text-2xl font-semibold">Breakfast</h3>
+              <p className="mt-3 text-gray-200">
+                Start your day with a hearty breakfast featuring golden waffles, buttery croissants, farm‑fresh eggs, and seasonal fruits. Each plate is crafted to give you energy and delight from the very first bite.
+              </p>
+            </div>
+            <img src={img1} alt="Breakfast" className="h-64 w-full object-cover hover:scale-105 transition" />
           </div>
-          <div className='p-16'>
-            <img src={line} alt="" className='-mb-2 w-45 place-self-center'/>
-            <h2 className='text-amber-300 text-center text-4xl'>Drinks</h2>
-            <p className='text-center mt-3'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus explicabo earum nam impedit error. Distinctio molestiae laudantium eveniet tenetur veritatis!</p>
+
+          {/* Drinks */}
+          <div className="flex flex-col items-center text-center bg-white/5 rounded-lg shadow-lg overflow-hidden hover:scale-[1.02] transition">
+            <img src={img3} alt="Drinks" className="h-64 w-full object-cover hover:scale-105 transition" />
+            <div className="p-8">
+              <h3 className="text-amber-400 text-2xl font-semibold">Drinks</h3>
+              <p className="mt-3 text-gray-200">
+                Sip on refreshing juices, signature cocktails, and artisanal coffees. From tropical blends bursting with flavor to carefully crafted classics, our drinks menu is designed to complement every meal and mood.
+              </p>
+            </div>
           </div>
-        </div>
-        {/* third service */}
-        <div className='w-1/3'>
-          <div className='p-16'>
-            <img src={line} alt="" className='-mb-2 w-45 place-self-center'/>
-            <h2 className='text-amber-300 text-center text-4xl'>Appertizers</h2>
-            <p className='text-center mt-3'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem error ratione dolorum maxime atque? Voluptatum, doloremque. Deserunt commodi molestias odio.</p>
+
+          {/* Appetizers */}
+          <div className="flex flex-col items-center text-center bg-white/5 rounded-lg shadow-lg overflow-hidden hover:scale-[1.02] transition">
+            <div className="p-8">
+              <h3 className="text-amber-400 text-2xl font-semibold">Appetizers</h3>
+              <p className="mt-3 text-gray-200">
+                Begin your dining experience with savory starters — from crispy skewers and spiced bites to fresh seafood creations. Our appetizers are designed to awaken your palate and set the stage for the main course.
+              </p>
+            </div>
+            <img src={img2} alt="Appetizers" className="h-64 w-full object-cover hover:scale-105 transition" />
           </div>
-          <div>
-            <img src={img2} alt="" className='h-160'/>
-          </div>
+
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
