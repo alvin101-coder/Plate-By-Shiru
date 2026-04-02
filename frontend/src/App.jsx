@@ -8,7 +8,7 @@ import Footer from './Components/Footer'
 import {ToastContainer} from 'react-toastify'
 
 
-export const backendUrl = 'http://localhost:4000'
+export const backendUrl = 'https://plate-by-shiru-backend.onrender.com'
 
 
 const App = () => {
