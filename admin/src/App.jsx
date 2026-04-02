@@ -11,9 +11,8 @@ import SuperAdminSignup from "./Components/SuperAdminSignup";
 import { Routes , Route, Navigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 
-export const backendUrl = 'http://localhost:4000'
+export const backendUrl = 'https://plate-by-shiru-backend.onrender.com'
 
-// ✅ PrivateRoute wrapper using Navigate for clean redirection
 const PrivateRoute = ({ token, element }) => {
   return token ? element : <Navigate to="/" replace />;
 };
@@ -33,7 +32,6 @@ const App = () => {
       {
         !token ? (
           <Routes>
-            {/* ✅ login and signup accessible without token */}
             <Route path="/" element={<Login setToken={setToken} />} />
             <Route path="/create-admin" element={<SuperAdminSignup />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -48,7 +46,6 @@ const App = () => {
                 <Route path='/add' element={<PrivateRoute token={token} element={<AddMenu token={token} />} />} />
                 <Route path='/list' element={<PrivateRoute token={token} element={<ListMenu token={token} />} />} />
                 <Route path='/table' element={<PrivateRoute token={token} element={<AdminTable token={token} />} />} />
-                {/* ✅ fallback route to redirect unknown paths */}
                 <Route path="*" element={<Navigate to="/add" replace />} />
               </Routes>
             </div>
