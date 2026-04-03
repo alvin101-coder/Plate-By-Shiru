@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -18,7 +18,7 @@ const Footer = () => {
           <div className='flex justify-between md:justify-start gap-4 mt-3 text-orange-500'>
             <FaFacebook  className='text-3xl cursor-pointer'/>
             <FaInstagram className='text-3xl cursor-pointer'/>
-            <FaTwitter className='text-3xl cursor-pointer'/>
+            <FaTiktok className='text-3xl cursor-pointer'/>
           </div>
         </div>
         <div>
