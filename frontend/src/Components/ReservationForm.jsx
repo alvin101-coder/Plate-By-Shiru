@@ -141,22 +141,21 @@ const ReservationForm = () => {
         <div className="bg-black/40 text-gray-300 p-8 shadow-md space-y-10 text-center rounded-lg">
           <div>
             <h3 className="text-3xl font-bold">Address</h3>
-            <p>123, Abc Street, N-axis, Sample City, Country</p>
+            <p>Across Lifecare Hospital, Kikuyu town</p>
           </div>
           <div>
             <p>Call Us</p>
-            <h3 className="text-3xl font-bold">+0123-456-789</h3>
+            <h3 className="text-3xl font-bold">0717451527</h3>
           </div>
           <div>
             <h3 className="text-3xl font-bold">Open Time</h3>
-            <p>Mon - Fri: 11:00 AM - 10:00 PM</p>
-            <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
+            <p>Mon - Sat: 7:30 AM - 9:00 PM</p>
+            <p>Sun: 3:00 PM - 8:00 PM</p>
           </div>
           <div>
             <h3 className="text-lg font-bold mb-2">Stay Connected</h3>
             <div className="flex gap-4 justify-center">
               <FaFacebook className="text-4xl text-white"/>
-              <FaTwitter className="text-4xl text-white"/>
               <FaInstagram className="text-4xl text-white"/>
               <FaTiktok className="text-4xl text-white"/>
             </div>

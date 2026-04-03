@@ -25,16 +25,16 @@ const Hero = () => {
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         effect="fade"
         fadeEffect={{ crossFade: true }}
-        pagination={{
-          clickable: true,
-          renderBullet: (index, className) =>
-            `<span class="${className} w-3 h-3 mx-1 rounded-full bg-white opacity-60 
-             [&.swiper-pagination-bullet-active]:bg-amber-500 [&.swiper-pagination-bullet-active]:opacity-100"></span>`
-        }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        }}
+        // pagination={{
+        //   clickable: true,
+        //   renderBullet: (index, className) =>
+        //     `<span class="${className} w-3 h-3 mx-1 rounded-full bg-white opacity-60 
+        //      [&.swiper-pagination-bullet-active]:bg-amber-500 [&.swiper-pagination-bullet-active]:opacity-100"></span>`
+        // }}
+        // navigation={{
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev'
+        // }}
         className="h-full"
       >
         {foodImages.map((img, i) => (
