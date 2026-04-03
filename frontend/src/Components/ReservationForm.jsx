@@ -141,7 +141,7 @@ const ReservationForm = () => {
         <div className="bg-black/40 text-gray-300 p-8 shadow-md space-y-10 text-center rounded-lg">
           <div>
             <h3 className="text-3xl font-bold">Address</h3>
-            <p>Across Lifecare Hospital, Kikuyu town</p>
+            <p>Kikuyu town, MUCHANE PLAZA</p>
           </div>
           <div>
             <p>Call Us</p>
